@@ -1,0 +1,17 @@
+{
+  "name": "common",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@stablelib/random": "^1.0.2",
+    "valid-url": "^1.0.9"
+  }
+}

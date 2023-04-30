@@ -1,0 +1,18 @@
+{
+  "name": "stacks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@stacks/common": "^6.5.2",
+    "@stacks/encryption": "^6.5.2",
+    "@stacks/transactions": "^6.5.2",
+    "common": "workspace:^"
+  }
+}

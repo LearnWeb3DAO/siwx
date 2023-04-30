@@ -1,0 +1,17 @@
+{
+  "name": "solana",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@noble/curves": "^1.0.0",
+    "common": "workspace:^",
+    "uint8arrays": "^4.0.3"
+  }
+}

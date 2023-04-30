@@ -1,0 +1,20 @@
+{
+  "name": "siwx",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "lerna run build"
+  },
+  "keywords": [],
+  "author": "Haardik H (LearnWeb3 DAO)",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@types/node": "^18.16.3",
+    "lerna": "^6.6.1",
+    "tsx": "^3.12.6",
+    "typescript": "^5.0.4"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}

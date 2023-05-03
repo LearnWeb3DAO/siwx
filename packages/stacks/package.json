@@ -4,7 +4,8 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
@@ -14,5 +15,10 @@
     "@stacks/encryption": "^6.5.2",
     "@stacks/transactions": "^6.5.2",
     "common": "workspace:^"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.1",
+    "jest": "^29.5.0",
+    "ts-jest": "^29.1.0"
   }
 }

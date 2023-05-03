@@ -10,6 +10,7 @@ import {
   publicKeyFromSignatureRsv,
   createMessageSignature,
   getAddressFromPublicKey,
+  PubKeyEncoding,
 } from "@stacks/transactions";
 import { bytesToHex } from "@stacks/common";
 
@@ -28,7 +29,8 @@ export class SiwStacksMessage extends SiwxMessage<string> {
 
       const recoveredPubKey = publicKeyFromSignatureRsv(
         bytesToHex(hashMessage(message)),
-        createMessageSignature(signature)
+        createMessageSignature(signature),
+        PubKeyEncoding.Uncompressed
       );
 
       const recoveredAddress = getAddressFromPublicKey(recoveredPubKey);

@@ -5,7 +5,7 @@
   "scripts": {
     "build": "lerna run build",
     "test": "lerna run --stream test",
-    "publish": "lerna publish"
+    "release": "lerna publish"
   },
   "keywords": [],
   "author": "Haardik H (LearnWeb3 DAO)",
@@ -22,6 +22,9 @@
     "ts-jest": "^29.1.0",
     "tsx": "^3.12.6",
     "typescript": "^5.0.4"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "workspaces": [
     "packages/*"

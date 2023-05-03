@@ -4,7 +4,8 @@
   "description": "",
   "scripts": {
     "build": "lerna run build",
-    "test": "lerna run --stream test"
+    "test": "lerna run --stream test",
+    "publish": "lerna publish"
   },
   "keywords": [],
   "author": "Haardik H (LearnWeb3 DAO)",

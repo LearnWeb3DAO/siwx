@@ -6,7 +6,7 @@ import {
   VerifyParams,
 } from "common";
 import { ed25519 } from "@noble/curves/ed25519";
-import { fromString as u8aFromString } from "uint8arrays/from-string";
+import base58 from "bs58";
 
 export class SiwsMessage extends SiwxMessage<Uint8Array> {
   toMessage(): Uint8Array {
@@ -24,8 +24,8 @@ export class SiwsMessage extends SiwxMessage<Uint8Array> {
       this._verify(params);
 
       const message = this.toMessage();
-      const signatureU8 = u8aFromString(signature, "base58btc");
-      const publicKeyU8 = u8aFromString(this.address, "base58btc");
+      const signatureU8 = base58.encode(new TextEncoder().encode(signature));
+      const publicKeyU8 = base58.encode(new TextEncoder().encode(this.address));
 
       const verifyResult = ed25519.verify(signatureU8, message, publicKeyU8);
       if (!verifyResult) {

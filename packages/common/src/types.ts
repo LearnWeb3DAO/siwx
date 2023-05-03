@@ -26,6 +26,7 @@ export enum SiwxErrorTypes {
   NONCE_MISMATCH = "Nonce does not match provided nonce for verification.",
   INVALID_TIME_FORMAT = "Invalid time format.",
   INVALID_MESSAGE_VERSION = "Invalid message version.",
+  ADDRESS_MISMATCH = "Address does not match provided address for verification.",
 }
 
 export class SiwxError extends Error {

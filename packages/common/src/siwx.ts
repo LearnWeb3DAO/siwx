@@ -54,7 +54,7 @@ export abstract class SiwxMessage<TMessageType> {
     const nonceField = `Nonce: ${this.nonce}`;
     const chainIdField = `Chain ID: ${this.chainId}`;
 
-    const suffixArray = [uriField, versionField, nonceField, chainIdField];
+    const suffixArray = [uriField, versionField, chainIdField, nonceField];
 
     this.issuedAt = this.issuedAt ?? new Date().toISOString();
     suffixArray.push(`Issued At: ${this.issuedAt}`);

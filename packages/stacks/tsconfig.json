@@ -4,7 +4,14 @@
     "target": "es2015",
     "declaration": true,
     "outDir": "./dist",
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "skipLibCheck": true
   },
-  "include": ["src/**/*"]
+  "include": ["src/**/*"],
+  "exclude": [
+    "node_modules",
+    "**/dist/**/*",
+    "**/__tests__/**/*",
+    "**/__mocks__/**/*"
+  ]
 }

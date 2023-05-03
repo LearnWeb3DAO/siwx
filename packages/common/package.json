@@ -14,5 +14,8 @@
     "@stablelib/random": "^1.0.2",
     "valid-url": "^1.0.9"
   },
-  "gitHead": "46eb465394c0a9cfe41f687dfd9d0e15025ca6e2"
+  "publishConfig": {
+    "access": "public"
+  },
+  "gitHead": "cfc53b19a2f1d5d982e04475ec69e24794f0740e"
 }

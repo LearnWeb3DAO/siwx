@@ -1,5 +1,5 @@
 {
-  "name": "siwx",
+  "name": "@learnweb3dao/siwx",
   "version": "1.0.0",
   "description": "",
   "scripts": {
@@ -8,6 +8,10 @@
   },
   "keywords": [],
   "author": "Haardik H (LearnWeb3 DAO)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LearnWeb3DAO/siwx"
+  },
   "license": "Apache-2.0",
   "devDependencies": {
     "@types/jest": "^29.5.1",

@@ -24,8 +24,8 @@ export class SiwsMessage extends SiwxMessage<Uint8Array> {
       this._verify(params);
 
       const message = this.toMessage();
-      const signatureU8 = base58.encode(new TextEncoder().encode(signature));
-      const publicKeyU8 = base58.encode(new TextEncoder().encode(this.address));
+      const signatureU8 = base58.decode(signature);
+      const publicKeyU8 = base58.decode(this.address);
 
       const verifyResult = ed25519.verify(signatureU8, message, publicKeyU8);
       if (!verifyResult) {

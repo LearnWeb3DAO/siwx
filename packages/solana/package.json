@@ -18,7 +18,7 @@
   "dependencies": {
     "@noble/curves": "^1.0.0",
     "bs58": "^5.0.0",
-    "common": "^0.1.0"
+    "@learnweb3dao/siwx-common": "^0.1.0"
   },
   "devDependencies": {
     "@types/jest": "^29.5.1",

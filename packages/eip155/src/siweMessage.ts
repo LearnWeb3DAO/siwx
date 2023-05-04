@@ -4,7 +4,7 @@ import {
   SiwxMessage,
   VerificationResponse,
   VerifyParams,
-} from "common";
+} from "@learnweb3dao/siwx-common";
 import { utils } from "ethers";
 
 export class SiweMessage extends SiwxMessage<string> {

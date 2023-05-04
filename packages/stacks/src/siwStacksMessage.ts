@@ -4,7 +4,7 @@ import {
   SiwxMessage,
   VerificationResponse,
   VerifyParams,
-} from "common";
+} from "@learnweb3dao/siwx-common";
 import { verifyMessageSignatureRsv, hashMessage } from "@stacks/encryption";
 import {
   publicKeyFromSignatureRsv,

@@ -4,7 +4,7 @@ import {
   SiwxMessage,
   VerificationResponse,
   VerifyParams,
-} from "common";
+} from "@learnweb3dao/siwx-common";
 import { ed25519 } from "@noble/curves/ed25519";
 import base58 from "bs58";
 

@@ -16,7 +16,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "common": "^0.1.0",
+    "@learnweb3dao/siwx-common": "^0.1.0",
     "ethers": "5"
   },
   "devDependencies": {

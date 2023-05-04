@@ -6,6 +6,7 @@ import {
   getPublicKey,
   getAddressFromPublicKey,
   signMessageHashRsv,
+  compressPublicKey,
 } from "@stacks/transactions";
 import { hashMessage } from "@stacks/encryption";
 
@@ -37,7 +38,8 @@ describe("Sign in with Stacks", () => {
     async (_, test: any) => {
       const randomSecretKey = makeRandomPrivKey();
       const randomPubKey = getPublicKey(randomSecretKey);
-      const randomAddress = getAddressFromPublicKey(randomPubKey.data);
+      const compressedPubKey = compressPublicKey(randomPubKey.data);
+      const randomAddress = getAddressFromPublicKey(compressedPubKey.data);
 
       const msg = new SiwStacksMessage({
         ...test.fields,

@@ -30,7 +30,7 @@ export class SiwStacksMessage extends SiwxMessage<string> {
       const recoveredPubKey = publicKeyFromSignatureRsv(
         bytesToHex(hashMessage(message)),
         createMessageSignature(signature),
-        PubKeyEncoding.Uncompressed
+        PubKeyEncoding.Compressed
       );
 
       const recoveredAddress = getAddressFromPublicKey(recoveredPubKey);

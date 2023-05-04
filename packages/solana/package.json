@@ -1,6 +1,6 @@
 {
   "name": "@learnweb3dao/siws",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -16,9 +16,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@learnweb3dao/siwx-common": "^0.1.0",
     "@noble/curves": "^1.0.0",
-    "bs58": "^5.0.0",
-    "@learnweb3dao/siwx-common": "^0.1.0"
+    "bs58": "^5.0.0"
   },
   "devDependencies": {
     "@types/jest": "^29.5.1",

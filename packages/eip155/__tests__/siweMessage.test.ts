@@ -1,4 +1,4 @@
-import { SiwxErrorTypes } from "common";
+import { SiwxErrorTypes } from "@learnweb3dao/siwx-common";
 import { SiweMessage } from "../src";
 import { Wallet } from "ethers";
 

@@ -1,5 +1,5 @@
 import { ed25519 } from "@noble/curves/ed25519";
-import { SiwxErrorTypes } from "common";
+import { SiwxErrorTypes } from "@learnweb3dao/siwx-common";
 import { SiwsMessage } from "../src";
 import base58 from "bs58";
 

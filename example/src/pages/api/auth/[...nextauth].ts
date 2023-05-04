@@ -32,7 +32,6 @@ export const getAuthOptions = (req: NextApiRequest) => {
 
       async authorize(credentials) {
         try {
-          console.log("attempting auth");
           const siwe = new SiweMessage(
             JSON.parse(credentials?.message || "{}")
           );
@@ -113,6 +112,7 @@ export const getAuthOptions = (req: NextApiRequest) => {
 
       async authorize(credentials) {
         try {
+          console.log("SIWSTACKS START");
           const siwStacks = new SiwStacksMessage(
             JSON.parse(credentials?.message || "{}")
           );
@@ -122,6 +122,8 @@ export const getAuthOptions = (req: NextApiRequest) => {
             domain: nextAuthUrl.host,
             nonce: await getCsrfToken({ req }),
           });
+
+          console.log({ result });
 
           if (!result.success) return null;
 

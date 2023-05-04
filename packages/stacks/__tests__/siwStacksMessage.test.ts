@@ -1,8 +1,7 @@
 import { bytesToHex } from "@stacks/common";
-import { SiwxErrorTypes } from "common";
+import { SiwxErrorTypes } from "@learnweb3dao/siwx-common";
 import { SiwStacksMessage } from "../src";
 import {
-  createStacksPrivateKey,
   makeRandomPrivKey,
   getPublicKey,
   getAddressFromPublicKey,

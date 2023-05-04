@@ -13,9 +13,16 @@ export const SIWE: React.FC = () => {
   const { chain } = useNetwork();
   const { connect } = useConnect({
     connector: new InjectedConnector(),
+    onError: (error) => {
+      console.log(error);
+    },
+    onSuccess: () => {
+      if (!session) {
+        handleLogin();
+      }
+    },
   });
-  const router = useRouter();
-  const { data: session, status } = useSession();
+  const { data: session } = useSession();
 
   const handleLogin = async () => {
     try {
@@ -33,8 +40,7 @@ export const SIWE: React.FC = () => {
         message: message.toMessage(),
       });
 
-      signIn("credentials", {
-        id: "ethereum",
+      signIn("ethereum", {
         message: JSON.stringify(message),
         redirect: false,
         signature,
@@ -44,19 +50,13 @@ export const SIWE: React.FC = () => {
     }
   };
 
-  useEffect(() => {
-    console.log(isConnected);
-    if (isConnected && !session) {
-      handleLogin();
-    }
-  }, [isConnected]);
-
   return (
     <button
       onClick={(e) => {
         e.preventDefault();
         if (!isConnected) {
           connect();
+          handleLogin();
         } else {
           handleLogin();
         }

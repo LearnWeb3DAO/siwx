@@ -112,7 +112,6 @@ export const getAuthOptions = (req: NextApiRequest) => {
 
       async authorize(credentials) {
         try {
-          console.log("SIWSTACKS START");
           const siwStacks = new SiwStacksMessage(
             JSON.parse(credentials?.message || "{}")
           );
@@ -122,8 +121,6 @@ export const getAuthOptions = (req: NextApiRequest) => {
             domain: nextAuthUrl.host,
             nonce: await getCsrfToken({ req }),
           });
-
-          console.log({ result });
 
           if (!result.success) return null;
 
@@ -153,7 +150,6 @@ export const getAuthOptions = (req: NextApiRequest) => {
     secret: process.env.NEXTAUTH_SECRET,
     callbacks: {
       async session({ session, token }: { session: Session; token: JWT }) {
-        console.log({ session, token });
         session.address = token.sub || "";
         session.user.name = token.sub || "";
         session.user.image = "https://picsum.photos/500";

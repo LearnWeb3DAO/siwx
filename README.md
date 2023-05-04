@@ -19,7 +19,7 @@ If you have suggestions for any more, please create a specification for [CAIP-12
 
 ## Example
 
-TODO: Example repo with Next.js and NextAuth demonstrating SIWx.
+See the `example` folder for a Next.js + NextAuth end to end example.
 
 ## Specification
 

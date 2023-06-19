@@ -1,6 +1,6 @@
 {
   "name": "@learnweb3dao/siwx-common",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -21,5 +21,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "cfc53b19a2f1d5d982e04475ec69e24794f0740e"
+  "gitHead": "119495621d840ebb44d9fd0ef6ca3c72539b8041"
 }

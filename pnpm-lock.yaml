@@ -38,7 +38,7 @@ importers:
   packages/eip155:
     dependencies:
       '@learnweb3dao/siwx-common':
-        specifier: ^0.2.0
+        specifier: ^0.2.1
         version: link:../common
       ethers:
         specifier: '5'
@@ -60,7 +60,7 @@ importers:
   packages/solana:
     dependencies:
       '@learnweb3dao/siwx-common':
-        specifier: ^0.2.0
+        specifier: ^0.2.1
         version: link:../common
       '@noble/curves':
         specifier: ^1.0.0
@@ -85,7 +85,7 @@ importers:
   packages/stacks:
     dependencies:
       '@learnweb3dao/siwx-common':
-        specifier: ^0.2.0
+        specifier: ^0.2.1
         version: link:../common
       '@stacks/common':
         specifier: ^6.5.2
@@ -110,7 +110,7 @@ importers:
   packages/tezos:
     dependencies:
       '@learnweb3dao/siwx-common':
-        specifier: ^0.2.0
+        specifier: ^0.2.1
         version: link:../common
       '@taquito/signer':
         specifier: ^17.0.0

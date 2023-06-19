@@ -1,6 +1,6 @@
 {
-  "name": "@learnweb3dao/siwTezos",
-  "version": "0.2.0",
+  "name": "@learnweb3dao/siwtezos",
+  "version": "0.2.1",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -16,7 +16,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@learnweb3dao/siwx-common": "^0.2.0",
+    "@learnweb3dao/siwx-common": "^0.2.1",
     "@taquito/signer": "^17.0.0",
     "@taquito/utils": "^17.0.0",
     "bs58": "^5.0.0"
@@ -30,5 +30,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "cfc53b19a2f1d5d982e04475ec69e24794f0740e"
+  "gitHead": "119495621d840ebb44d9fd0ef6ca3c72539b8041"
 }

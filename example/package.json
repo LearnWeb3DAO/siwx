@@ -9,12 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@airgap/beacon-types": "^4.0.4",
+    "@learnweb3dao/siwTezos": "workspace:^",
     "@learnweb3dao/siwe": "workspace:^",
     "@learnweb3dao/siws": "workspace:^",
     "@learnweb3dao/siwstacks": "workspace:^",
     "@solana/web3.js": "^1.75.0",
     "@stacks/connect": "^7.3.1",
     "@stacks/network": "^6.5.2",
+    "@taquito/beacon-wallet": "^17.0.0",
+    "@taquito/taquito": "^17.0.0",
     "@types/node": "^18.16.3",
     "@types/react": "18.2.5",
     "@types/react-dom": "18.2.3",

@@ -1,3 +1,4 @@
+import { SiwTezosMessage } from "@learnweb3dao/siwTezos";
 import { SiweMessage } from "@learnweb3dao/siwe";
 import { SiwsMessage } from "@learnweb3dao/siws";
 import { SiwStacksMessage } from "@learnweb3dao/siwstacks";
@@ -122,10 +123,57 @@ export const getAuthOptions = (req: NextApiRequest) => {
             nonce: await getCsrfToken({ req }),
           });
 
+          console.log({ result });
+
           if (!result.success) return null;
 
           return {
             id: siwStacks.address,
+          };
+        } catch (error) {
+          console.error(error);
+          return null;
+        }
+      },
+    }),
+    CredentialsProvider({
+      id: "tezos",
+      name: "Tezos",
+      credentials: {
+        message: {
+          label: "Message",
+          type: "text",
+          placeholder: "0x0",
+        },
+        signature: {
+          label: "Signature",
+          type: "text",
+          placeholder: "0x0",
+        },
+      },
+
+      async authorize(credentials, request) {
+        try {
+          console.log({ credentials });
+          const siwTezos = new SiwTezosMessage(
+            JSON.parse(credentials?.message || "{}")
+          );
+          const nextAuthUrl = new URL(process.env.NEXTAUTH_URL as string);
+          const csrfToken = await getCsrfToken({
+            req: { headers: req.headers },
+          });
+          const result = await siwTezos.verify({
+            signature: credentials?.signature || "",
+            domain: nextAuthUrl.host,
+            nonce: csrfToken,
+          });
+
+          console.log({ result });
+
+          if (!result.success) return null;
+
+          return {
+            id: siwTezos.address,
           };
         } catch (error) {
           console.error(error);
@@ -139,7 +187,7 @@ export const getAuthOptions = (req: NextApiRequest) => {
     req.method === "GET" && req.query.nextauth?.includes("signin");
 
   if (isDefaultSigninPage) {
-    providers.splice(-3, 3);
+    providers.splice(-4, 4);
   }
 
   const authOptions: NextAuthOptions = {

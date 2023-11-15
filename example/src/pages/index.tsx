@@ -1,5 +1,6 @@
 "use client";
 
+import { SIWStarknet } from "@/components/siwStarknet";
 import { SIWTezos } from "@/components/siwTezos";
 import { SIWE } from "@/components/siwe";
 import { SIWS } from "@/components/siws";
@@ -39,6 +40,7 @@ export default function Home() {
       <SIWS />
       <SIWStacks />
       <SIWTezos />
+      <SIWStarknet />
     </main>
   );
 }

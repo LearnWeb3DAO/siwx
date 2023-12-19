@@ -65,7 +65,7 @@ export class SiwStarknetMessage extends SiwxMessage<TypedData> {
       const msgHash = typedData.getMessageHash(this.toMessage(), this.address);
 
       const provider = new Provider({
-        sequencer: { network: constants.NetworkName.SN_GOERLI },
+        sequencer: { network: constants.NetworkName.SN_MAIN },
       });
 
       const { abi } = await provider.getClassAt(this.address);

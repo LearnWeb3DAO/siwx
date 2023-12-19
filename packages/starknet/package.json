@@ -15,7 +15,7 @@
     "url": "https://github.com/LearnWeb3DAO/siwx"
   },
   "dependencies": {
-    "@learnweb3dao/siwx-common": "workspace:^0.2.1",
+    "@learnweb3dao/siwx-common": "^0.2.1",
     "starknet": "^5.19.5"
   }
 }

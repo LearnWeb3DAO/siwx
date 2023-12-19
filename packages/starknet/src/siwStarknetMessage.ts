@@ -5,7 +5,15 @@ import {
   VerificationResponse,
   VerifyParams,
 } from "@learnweb3dao/siwx-common";
-import { TypedData, ec, hash, shortString, stark, typedData } from "starknet";
+import {
+  Contract,
+  Provider,
+  TypedData,
+  constants,
+  hash,
+  shortString,
+  typedData,
+} from "starknet";
 
 export interface StarknetVerifyParams extends VerifyParams {
   pubKey: string;
@@ -54,13 +62,18 @@ export class SiwStarknetMessage extends SiwxMessage<TypedData> {
       this._verify(params);
 
       const [r, s] = signature.split(",");
-      const ecSig = new ec.starkCurve.Signature(BigInt(r), BigInt(s));
-
       const msgHash = typedData.getMessageHash(this.toMessage(), this.address);
 
-      const verifyResult = ec.starkCurve.verify(ecSig, msgHash, pubKey);
-      console.log({ verifyResult });
-      if (!verifyResult) {
+      const provider = new Provider({
+        sequencer: { network: constants.NetworkName.SN_GOERLI },
+      });
+
+      const { abi } = await provider.getClassAt(this.address);
+      const contractAccount = new Contract(abi, this.address, provider);
+
+      try {
+        await contractAccount.isValidSignature(msgHash, [r, s]);
+      } catch {
         throw new SiwxError(
           SiwxErrorTypes.INVALID_SIGNATURE,
           `Signature does not match public key ${this.address}`

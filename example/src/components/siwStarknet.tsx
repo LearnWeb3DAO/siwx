@@ -1,13 +1,7 @@
-import React from "react";
-import { StarknetWindowObject, connect, disconnect } from "starknetkit";
 import { SiwStarknetMessage } from "@learnweb3dao/siwstarknet";
 import { getCsrfToken, signIn } from "next-auth/react";
-import {
-  TypedData,
-  WeierstrassSignatureType,
-  hash,
-  shortString,
-} from "starknet";
+import React from "react";
+import { connect } from "starknetkit";
 
 export const SIWStarknet: React.FC = () => {
   const handleLogin = async () => {

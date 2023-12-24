@@ -204,7 +204,6 @@ export const getAuthOptions = (req: NextApiRequest) => {
       },
       async authorize(credentials, req) {
         try {
-          console.log({ credentials });
           const siwStarknet = new SiwStarknetMessage(
             JSON.parse(credentials?.message || "{}")
           );
@@ -216,12 +215,11 @@ export const getAuthOptions = (req: NextApiRequest) => {
             signature: credentials?.signature || "",
             domain: nextAuthUrl.host,
             nonce: csrfToken,
-            pubKey: credentials?.pubKey || "",
           });
 
-          console.log({ result });
-
           if (!result.success) return null;
+
+          console.log({ result });
 
           return {
             id: siwStarknet.address,

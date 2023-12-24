@@ -1,0 +1,365 @@
+{
+    "couple of optional fields Starknet": {
+        "message": {
+            "types": {
+                "StarkNetDomain": [
+                    {
+                        "name": "name",
+                        "type": "string"
+                    },
+                    {
+                        "name": "version",
+                        "type": "felt"
+                    },
+                    {
+                        "name": "chainId",
+                        "type": "felt"
+                    }
+                ],
+                "Message": [
+                    {
+                        "name": "hash",
+                        "type": "felt"
+                    }
+                ]
+            },
+            "primaryType": "Message",
+            "domain": {
+                "name": "0x736572766963652e6f7267",
+                "version": "1",
+                "chainId": "0x534e5f474f45524c49"
+            },
+            "message": {
+                "hash": "20018672aa5d967f194d4beada5c33d"
+            }
+        },
+        "fields": {
+            "domain": "service.org",
+            "address": "0x07e4a2cf3ab0f3deb12ae0cbd05e26fb852a75888f60558520f24957b1e0ef4e",
+            "statement": "I accept the ServiceOrg Terms of Service: https://service.org/tos",
+            "uri": "https://service.org/login",
+            "version": "1",
+            "chainId": "SN_GOERLI",
+            "nonce": "32832457",
+            "issuedAt": "2021-01-11T11:15:23.000Z",
+            "resources": [
+                "ipfs://Qme7ss3ARVgxv6rXqVPiikMJ8u2NLgmgszg13pYrDKEoiu",
+                "https://example.com/my-web2-claim.json"
+            ]
+        }
+    },
+    "no optional field Starknet": {
+        "message": {
+            "types": {
+                "StarkNetDomain": [
+                    {
+                        "name": "name",
+                        "type": "string"
+                    },
+                    {
+                        "name": "version",
+                        "type": "felt"
+                    },
+                    {
+                        "name": "chainId",
+                        "type": "felt"
+                    }
+                ],
+                "Message": [
+                    {
+                        "name": "hash",
+                        "type": "felt"
+                    }
+                ]
+            },
+            "primaryType": "Message",
+            "domain": {
+                "name": "0x736572766963652e6f7267",
+                "version": "1",
+                "chainId": "0x534e5f474f45524c49"
+            },
+            "message": {
+                "hash": "404cdb5c27e0c87276f4002a6b3bf50"
+            }
+        },
+        "fields": {
+            "domain": "service.org",
+            "address": "0x07e4a2cf3ab0f3deb12ae0cbd05e26fb852a75888f60558520f24957b1e0ef4e",
+            "statement": "I accept the ServiceOrg Terms of Service: https://service.org/tos",
+            "uri": "https://service.org/login",
+            "version": "1",
+            "chainId": "SN_GOERLI",
+            "nonce": "32832457",
+            "issuedAt": "2021-01-11T11:15:23.000Z"
+        }
+    },
+    "timestamp without microseconds Starknet": {
+        "message": {
+            "types": {
+                "StarkNetDomain": [
+                    {
+                        "name": "name",
+                        "type": "string"
+                    },
+                    {
+                        "name": "version",
+                        "type": "felt"
+                    },
+                    {
+                        "name": "chainId",
+                        "type": "felt"
+                    }
+                ],
+                "Message": [
+                    {
+                        "name": "hash",
+                        "type": "felt"
+                    }
+                ]
+            },
+            "primaryType": "Message",
+            "domain": {
+                "name": "0x736572766963652e6f7267",
+                "version": "1",
+                "chainId": "0x534e5f474f45524c49"
+            },
+            "message": {
+                "hash": "313b83fcbdf2f35b934f7c55a2165ce"
+            }
+        },
+        "fields": {
+            "domain": "service.org",
+            "address": "0x07e4a2cf3ab0f3deb12ae0cbd05e26fb852a75888f60558520f24957b1e0ef4e",
+            "statement": "I accept the ServiceOrg Terms of Service: https://service.org/tos",
+            "uri": "https://service.org/login",
+            "version": "1",
+            "chainId": "SN_GOERLI",
+            "nonce": "32832457",
+            "issuedAt": "2021-09-30T16:25:24Z"
+        }
+    },
+    "domain is RFC 3986 authority with IP Starknet": {
+        "message": {
+            "types": {
+                "StarkNetDomain": [
+                    {
+                        "name": "name",
+                        "type": "string"
+                    },
+                    {
+                        "name": "version",
+                        "type": "felt"
+                    },
+                    {
+                        "name": "chainId",
+                        "type": "felt"
+                    }
+                ],
+                "Message": [
+                    {
+                        "name": "hash",
+                        "type": "felt"
+                    }
+                ]
+            },
+            "primaryType": "Message",
+            "domain": {
+                "name": "0x3132372e302e302e31",
+                "version": "1",
+                "chainId": "0x534e5f474f45524c49"
+            },
+            "message": {
+                "hash": "2d89174deedb5081298ef74e5818446"
+            }
+        },
+        "fields": {
+            "domain": "127.0.0.1",
+            "address": "0x07e4a2cf3ab0f3deb12ae0cbd05e26fb852a75888f60558520f24957b1e0ef4e",
+            "statement": "I accept the ServiceOrg Terms of Service: https://service.org/tos",
+            "uri": "https://service.org/login",
+            "version": "1",
+            "chainId": "SN_GOERLI",
+            "nonce": "32832457",
+            "issuedAt": "2021-01-11T11:15:23.000Z"
+        }
+    },
+    "domain is RFC 3986 authority with userinfo Starknet": {
+        "message": {
+            "types": {
+                "StarkNetDomain": [
+                    {
+                        "name": "name",
+                        "type": "string"
+                    },
+                    {
+                        "name": "version",
+                        "type": "felt"
+                    },
+                    {
+                        "name": "chainId",
+                        "type": "felt"
+                    }
+                ],
+                "Message": [
+                    {
+                        "name": "hash",
+                        "type": "felt"
+                    }
+                ]
+            },
+            "primaryType": "Message",
+            "domain": {
+                "name": "0x74657374403132372e302e302e31",
+                "version": "1",
+                "chainId": "0x534e5f474f45524c49"
+            },
+            "message": {
+                "hash": "6228bf54e0816aabc44f4ea22b27b74"
+            }
+        },
+        "fields": {
+            "domain": "test@127.0.0.1",
+            "address": "0x07e4a2cf3ab0f3deb12ae0cbd05e26fb852a75888f60558520f24957b1e0ef4e",
+            "statement": "I accept the ServiceOrg Terms of Service: https://service.org/tos",
+            "uri": "https://service.org/login",
+            "version": "1",
+            "chainId": "SN_GOERLI",
+            "nonce": "32832457",
+            "issuedAt": "2021-01-11T11:15:23.000Z"
+        }
+    },
+    "domain is RFC 3986 authority with port Starknet": {
+        "message": {
+            "types": {
+                "StarkNetDomain": [
+                    {
+                        "name": "name",
+                        "type": "string"
+                    },
+                    {
+                        "name": "version",
+                        "type": "felt"
+                    },
+                    {
+                        "name": "chainId",
+                        "type": "felt"
+                    }
+                ],
+                "Message": [
+                    {
+                        "name": "hash",
+                        "type": "felt"
+                    }
+                ]
+            },
+            "primaryType": "Message",
+            "domain": {
+                "name": "0x3132372e302e302e313a38303830",
+                "version": "1",
+                "chainId": "0x534e5f474f45524c49"
+            },
+            "message": {
+                "hash": "30df7d249dbffaba63a683c6dfccf1d"
+            }
+        },
+        "fields": {
+            "domain": "127.0.0.1:8080",
+            "address": "0x07e4a2cf3ab0f3deb12ae0cbd05e26fb852a75888f60558520f24957b1e0ef4e",
+            "statement": "I accept the ServiceOrg Terms of Service: https://service.org/tos",
+            "uri": "https://service.org/login",
+            "version": "1",
+            "chainId": "SN_GOERLI",
+            "nonce": "32832457",
+            "issuedAt": "2021-01-11T11:15:23.000Z"
+        }
+    },
+    "domain is RFC 3986 authority with userinfo and port Starknet": {
+        "message": {
+            "types": {
+                "StarkNetDomain": [
+                    {
+                        "name": "name",
+                        "type": "string"
+                    },
+                    {
+                        "name": "version",
+                        "type": "felt"
+                    },
+                    {
+                        "name": "chainId",
+                        "type": "felt"
+                    }
+                ],
+                "Message": [
+                    {
+                        "name": "hash",
+                        "type": "felt"
+                    }
+                ]
+            },
+            "primaryType": "Message",
+            "domain": {
+                "name": "0x74657374403132372e302e302e313a38303830",
+                "version": "1",
+                "chainId": "0x534e5f474f45524c49"
+            },
+            "message": {
+                "hash": "3289162dbb2f267ea2a70679e62dbb5"
+            }
+        },
+        "fields": {
+            "domain": "test@127.0.0.1:8080",
+            "address": "0x07e4a2cf3ab0f3deb12ae0cbd05e26fb852a75888f60558520f24957b1e0ef4e",
+            "statement": "I accept the ServiceOrg Terms of Service: https://service.org/tos",
+            "uri": "https://service.org/login",
+            "version": "1",
+            "chainId": "SN_GOERLI",
+            "nonce": "32832457",
+            "issuedAt": "2021-01-11T11:15:23.000Z"
+        }
+    },
+    "no statement Starknet": {
+        "message": {
+            "types": {
+                "StarkNetDomain": [
+                    {
+                        "name": "name",
+                        "type": "string"
+                    },
+                    {
+                        "name": "version",
+                        "type": "felt"
+                    },
+                    {
+                        "name": "chainId",
+                        "type": "felt"
+                    }
+                ],
+                "Message": [
+                    {
+                        "name": "hash",
+                        "type": "felt"
+                    }
+                ]
+            },
+            "primaryType": "Message",
+            "domain": {
+                "name": "0x736572766963652e6f7267",
+                "version": "1",
+                "chainId": "0x534e5f474f45524c49"
+            },
+            "message": {
+                "hash": "21266c5f0e1c16766ed21cce3ca72f8"
+            }
+        },
+        "fields": {
+            "domain": "service.org",
+            "address": "0x07e4a2cf3ab0f3deb12ae0cbd05e26fb852a75888f60558520f24957b1e0ef4e",
+            "uri": "https://service.org/login",
+            "version": "1",
+            "chainId": "SN_GOERLI",
+            "nonce": "32832457",
+            "issuedAt": "2021-01-11T11:15:23.000Z"
+        }
+    }
+}

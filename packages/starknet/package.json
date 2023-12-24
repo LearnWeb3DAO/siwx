@@ -1,0 +1,21 @@
+{
+  "name": "@learnweb3dao/siwstarknet",
+  "version": "0.2.1",
+  "description": "",
+  "homepage": "https://github.com/LearnWeb3DAO/siwx#readme",
+  "license": "ISC",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LearnWeb3DAO/siwx"
+  },
+  "dependencies": {
+    "@learnweb3dao/siwx-common": "^0.2.1",
+    "starknet": "^5.19.5"
+  }
+}

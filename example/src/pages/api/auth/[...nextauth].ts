@@ -2,6 +2,7 @@ import { SiwTezosMessage } from "@learnweb3dao/siwTezos";
 import { SiweMessage } from "@learnweb3dao/siwe";
 import { SiwsMessage } from "@learnweb3dao/siws";
 import { SiwStacksMessage } from "@learnweb3dao/siwstacks";
+import { SiwStarknetMessage } from "@learnweb3dao/siwstarknet";
 import { NextApiRequest, NextApiResponse } from "next";
 import { NextAuthOptions, Session } from "next-auth";
 import { JWT } from "next-auth/jwt";
@@ -174,6 +175,54 @@ export const getAuthOptions = (req: NextApiRequest) => {
 
           return {
             id: siwTezos.address,
+          };
+        } catch (error) {
+          console.error(error);
+          return null;
+        }
+      },
+    }),
+    CredentialsProvider({
+      id: "starknet",
+      name: "Starknet",
+      credentials: {
+        message: {
+          label: "Message",
+          type: "text",
+          placeholder: "0x0",
+        },
+        signature: {
+          label: "Signature",
+          type: "text",
+          placeholder: "0x0",
+        },
+        pubKey: {
+          label: "Public Key",
+          type: "text",
+          placeholder: "0x0",
+        },
+      },
+      async authorize(credentials, req) {
+        try {
+          const siwStarknet = new SiwStarknetMessage(
+            JSON.parse(credentials?.message || "{}")
+          );
+          const nextAuthUrl = new URL(process.env.NEXTAUTH_URL as string);
+          const csrfToken = await getCsrfToken({
+            req: { headers: req.headers },
+          });
+          const result = await siwStarknet.verify({
+            signature: credentials?.signature || "",
+            domain: nextAuthUrl.host,
+            nonce: csrfToken,
+          });
+
+          if (!result.success) return null;
+
+          console.log({ result });
+
+          return {
+            id: siwStarknet.address,
           };
         } catch (error) {
           console.error(error);

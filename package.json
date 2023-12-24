@@ -5,7 +5,7 @@
   "scripts": {
     "build": "lerna run build",
     "test": "lerna run --stream test",
-    "release": "lerna publish"
+    "release": "lerna publish from-git --no-private"
   },
   "keywords": [],
   "author": "Haardik H (LearnWeb3 DAO)",

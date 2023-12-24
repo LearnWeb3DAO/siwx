@@ -1,6 +1,6 @@
 {
   "name": "@learnweb3dao/siwstarknet",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "",
   "homepage": "https://github.com/LearnWeb3DAO/siwx#readme",
   "license": "ISC",
@@ -15,7 +15,7 @@
     "url": "https://github.com/LearnWeb3DAO/siwx"
   },
   "dependencies": {
-    "@learnweb3dao/siwx-common": "^0.2.1",
+    "@learnweb3dao/siwx-common": "^0.3.0",
     "starknet": "^5.19.5"
   }
 }

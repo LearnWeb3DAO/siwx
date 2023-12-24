@@ -132,7 +132,7 @@ importers:
   packages/eip155:
     dependencies:
       '@learnweb3dao/siwx-common':
-        specifier: ^0.2.1
+        specifier: ^0.3.0
         version: link:../common
       ethers:
         specifier: '5'
@@ -154,7 +154,7 @@ importers:
   packages/solana:
     dependencies:
       '@learnweb3dao/siwx-common':
-        specifier: ^0.2.1
+        specifier: ^0.3.0
         version: link:../common
       '@noble/curves':
         specifier: ^1.0.0
@@ -179,7 +179,7 @@ importers:
   packages/stacks:
     dependencies:
       '@learnweb3dao/siwx-common':
-        specifier: ^0.2.1
+        specifier: ^0.3.0
         version: link:../common
       '@stacks/common':
         specifier: ^6.5.2
@@ -204,7 +204,7 @@ importers:
   packages/starknet:
     dependencies:
       '@learnweb3dao/siwx-common':
-        specifier: ^0.2.1
+        specifier: ^0.3.0
         version: link:../common
       starknet:
         specifier: ^5.19.5
@@ -213,7 +213,7 @@ importers:
   packages/tezos:
     dependencies:
       '@learnweb3dao/siwx-common':
-        specifier: ^0.2.1
+        specifier: ^0.3.0
         version: link:../common
       '@taquito/signer':
         specifier: ^17.0.0
@@ -2696,6 +2696,7 @@ packages:
     dependencies:
       is-glob: 4.0.3
       micromatch: 4.0.5
+      napi-wasm: 1.1.0
     dev: false
     bundledDependencies:
       - napi-wasm
@@ -9400,6 +9401,10 @@ packages:
     resolution: {integrity: sha512-eSRppjcPIatRIMC1U6UngP8XFcz8MQWGQdt1MTBQ7NaAmvXDfvNxbvWV3x2y6CdEUciCSsDHDQZbhYaB8QEo2g==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
+    dev: false
+
+  /napi-wasm@1.1.0:
+    resolution: {integrity: sha512-lHwIAJbmLSjF9VDRm9GoVOy9AGp3aIvkjv+Kvz9h16QR3uSVYH78PNQUnT2U4X53mhlnV2M7wrhibQ3GHicDmg==}
     dev: false
 
   /natural-compare@1.4.0:
